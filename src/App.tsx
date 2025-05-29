@@ -6,10 +6,12 @@ function App() {
 
     return (
         <>
-            <MyComponent text={'Hello Guys!'}/>
-            <MyComponent text={'Hello pups!'}/>
-            <MyComponent text={'Hello candy!'}/>
-            <MyComponent text={'Hello boys!'}/>
+            <MyComponent title={'Hello Guys!'}>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </MyComponent>
+            <MyComponent title={'Hello pups!'}/>
+            <MyComponent title={'Hello candy!'}/>
+            <MyComponent title={'Hello boys!'}/>
             <MyOwnComponent text={"That's true"}/>
         </>
     )
