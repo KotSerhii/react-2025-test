@@ -1,0 +1,15 @@
+body{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+ul{
+    background-color: bisque;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    border: 2px solid cornflowerblue;
+
+}

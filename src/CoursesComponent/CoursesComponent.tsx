@@ -1,3 +1,4 @@
+import './CoursesComponenet.css'
 import type {ICourseModel} from "../models/courseModel.ts";
 import {CourseComponent} from "../CourseComponent/CourseComponenet.tsx";
 import {coursesAndDurationArray} from "../data/coursesAndDurationArray.ts";
