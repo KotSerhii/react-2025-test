@@ -4,7 +4,7 @@ import {coursesArray} from '../../data/CoursesArray';
 
 const CoursesList = () => {
     return (
-        <div>
+        <div className='p-16'>
             {
                 coursesArray.map((course, index) => <CourseComponent key={index} course={course}/>)
             }
