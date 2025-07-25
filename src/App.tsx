@@ -1,6 +1,7 @@
 import './App.css'
 import {useState} from 'react';
 import TimerComponent from '../src/components/timer-component/timerComponent'
+import UsersComponent from '../src/components/UsersComponent/UsersComponent'
 
 function App() {
     let [counter, setCounter] = useState<number>(0);
