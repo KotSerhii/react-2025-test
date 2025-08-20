@@ -1,6 +1,11 @@
-import React from 'react';
+import type { FC } from "react";
+import type { ITodo } from "../../models/ITodo";
 
-const Todo = () => {
+type TodoPropType = {
+    todo: ITodo;
+}
+
+const Todo:FC<TodoPropType> = () => {
     return (
         <div>
             
