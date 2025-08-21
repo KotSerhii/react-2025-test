@@ -1,7 +1,7 @@
 import  {useEffect, useState } from 'react';
 import type { IComment } from "../../models/Comments";
 import { loadComments } from "../../services/api.service";
-import {Comment} from '../comment-component/Comment'
+import Comment from "../comment-component/Comment";
 
 const Comments = () => {
     const [comments, setComments] = useState<IComment[]>([]);
