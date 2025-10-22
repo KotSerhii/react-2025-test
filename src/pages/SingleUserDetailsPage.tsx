@@ -5,7 +5,7 @@ import type { IUser } from "../models/IUser";
 const SingleUserDetailsPage = () => {
     const {state} = useLocation();
     const user =state as IUser;
-    return (
+    return (                                            //тут повинен бути компонент!!! (зроблено для скорочення)
         <div>
             {user.email}
         </div>
