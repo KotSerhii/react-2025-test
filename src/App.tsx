@@ -1,10 +1,14 @@
+import { Outlet } from "react-router-dom"
 import './App.css'
+import Menu from "./components/menu/Menu"
 
 function App() {
 
     return (
         <>
-Create App component
+            <Menu/>
+<hr/>
+            <Outlet/>
         </>
     )
 }

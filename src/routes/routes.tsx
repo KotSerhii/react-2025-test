@@ -1,8 +1,17 @@
+import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
+import CommentsFromJsonPage from "../pages/CommentsFromJsonPage";
+import CommentsPage from "../pages/CommentsPage";
+import PostsFromDummyPage from "../pages/PostsFromDummyPage";
+import PostsFromJsonPage from "../pages/PostsFromJsonPage";
+import PostsPage from "../pages/PostsPage";
+import UsersFromDummyPage from "../pages/UsersFromDummyPage";
+import UsersFromJsonPage from "../pages/UsersFromJsonPage";
+import UsersPage from "../pages/UsersPage";
 
-export const routes=[{
-    path:"/",element:<App/>,children:[{
-        path:"/users", element:<UsersPage/>,children:[{
+export const routes= createBrowserRouter([{
+    path:"/",element:<App/>,children:[
+        {   path:"/users", element:<UsersPage/>,children:[{
             path:"/users/jsonplaceholder", element: <UsersFromJsonPage/>},
             {path: "/users/dummyjson", element: <UsersFromDummyPage/>
         }]},
@@ -14,4 +23,4 @@ export const routes=[{
         {path:"/comments", element:<CommentsPage/>,children:[
                 {path:"/comments/jsonplaceholder", element: <CommentsFromJsonPage/>}
     ]}
-]}]
+]}])
