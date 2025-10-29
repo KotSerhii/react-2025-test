@@ -4,7 +4,8 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react](
+- https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 ## Expanding the ESLint configuration
@@ -52,3 +53,34 @@ export default tseslint.config({
   },
 })
 ```
+Побудувати меню, з можливістю переходу на наступні маршрути:
+
+/users/jsonplaceholder
+
+/users/dummyjson
+
+/posts/jsonplaceholder
+
+/posts/dummyjson
+
+/comments/jsonplaceholder
+
+Контент на сторінках відсутній. Лише грамотна обробка роутів
+
+
+
+#Uyj2GjyDDF
+
+Побудувати меню, з можливістю переходу на наступні маршрути:
+
+/users/jsonplaceholder – відобразити всі об’єкти з  https://jsonplaceholder.typicode.com/users
+
+/users/dummyjson – відобразити всі об’єкти з https://dummyjson.com/users
+
+/posts/jsonplaceholder- відобразити всі об’єкти з  https://jsonplaceholder.typicode.com/posts
+
+/posts/dummyjson – відобразити всі об’єкти з https://dummyjson.com/posts
+
+/comments/jsonplaceholder – відобразити всі об’єкти з https://jsonplaceholder.typicode.com/comments
+
+/comments/dummyjson – відобразити всі об’єкти з https://dummyjson.com/comments
