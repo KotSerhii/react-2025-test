@@ -9,6 +9,7 @@ import UsersFromDummyPage from "../pages/UsersFromDummyPage";
 import UsersFromJsonPage from "../pages/UsersFromJsonPage";
 import UsersPage from "../pages/UsersPage";
 import HomePage from "../pages/HomePage";
+import CommentsFromDummyPage from "../pages/CommentsFromDummyPage";
 
 export const routes= createBrowserRouter([{
     path:"/",element:<App/>,children:[
@@ -23,6 +24,8 @@ export const routes= createBrowserRouter([{
 ]
     },
         {path:"/comments", element:<CommentsPage/>,children:[
-                {path:"/comments/jsonplaceholder", element: <CommentsFromJsonPage/>}
+                {path:"/comments/jsonplaceholder", element: <CommentsFromJsonPage/>},
+                {path:"/comments/dummyjson", element: <CommentsFromDummyPage/>}
+
     ]}
 ]}])
