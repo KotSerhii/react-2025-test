@@ -3,8 +3,9 @@ import type { IUserJson } from "../../models/Jsonplaceholder/IUserJson";
 
 
 const UsersJsonComponent = () => {
-    const [users, setUsers] = useState<IUserJson>([]);
+    const [users, setUsers] = useState<IUserJson[]>([]);
     useEffect(() => {
+
 
     }, []);
     return (
