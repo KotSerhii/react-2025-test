@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import type {IUserJson} from "../../models/Jsonplaceholder/IUserJson";
 import {infoService} from "../../services/api.services";
+import UserJsonComponent from "../UserJsonComponent/UserJsonComponent";
 
 
 const UsersJsonComponent = () => {

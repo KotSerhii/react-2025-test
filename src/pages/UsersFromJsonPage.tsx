@@ -1,8 +1,9 @@
+import UsersJsonComponent from "../components/UsersJsonComponent/UsersJsonComponent";
 
 const UsersFromJsonPage = () => {
     return (
         <div>
-            Users From Jsonplaceholder Page
+            <UsersJsonComponent/>
         </div>
     );
 };
