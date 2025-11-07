@@ -8,8 +8,8 @@ const CommentsPage = () => {
                 <li><Link to={'/comments/dummyjson'}>Comments Page from dummy</Link></li>
             </ul>
 
-            <Outlet/>
 <hr></hr>
+            <Outlet/>
         </div>
     );
 };
