@@ -1,9 +1,10 @@
+import PostsJsonComponent from "../components/PostsJsonComponent/PostsJsonComponent";
 
 
 const PostsFromJsonPage = () => {
     return (
         <div>
-            Posts from Jsonplaceholder Page
+            <PostsJsonComponent/>
         </div>
     );
 };
