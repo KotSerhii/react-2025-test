@@ -6,14 +6,14 @@ const baseUrls = {
 export const urls = {
     users:{
         allUsersFromJson: baseUrls.JsonPlaceholder+'/users',
-        allUsersFromDummyJson: baseUrls.Dummyjson+'/users'
+        allUsersFromDummyjson: baseUrls.Dummyjson+'/users'
     },
     posts:{
         allPostsFromJson: baseUrls.JsonPlaceholder+'/posts',
-        allPostsFromDummyJson: baseUrls.Dummyjson+'/posts'
+        allPostsFromDummyjson: baseUrls.Dummyjson+'/posts'
     },
     comments:{
         allCommentsFromJson: baseUrls.JsonPlaceholder+'/comments',
-        allCommentsFromDummyJson: baseUrls.Dummyjson+'/comments'
+        allCommentsFromDummyjson: baseUrls.Dummyjson+'/comments'
     }
 }
