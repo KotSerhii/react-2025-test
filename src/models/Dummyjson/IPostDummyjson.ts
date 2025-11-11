@@ -1,4 +1,4 @@
-import type { Reactions } from "./IReactions";
+import type { IReactions } from "./IReactions";
 
 
 export interface IPostDummyjson {
@@ -6,7 +6,7 @@ export interface IPostDummyjson {
   title: string;
   body: string;
   tags: string[];
-  reactions: Reactions;
+  reactions: IReactions;
   views: number;
   userId: number;
 }

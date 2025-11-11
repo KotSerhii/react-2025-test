@@ -1,9 +1,10 @@
+import PostsDummyComponent from "../components/PostsDummyComponent/PostsDummyComponent";
 
 
 const PostsFromDummyPage = () => {
     return (
         <div>
-            Posts from Dummyplaceholder Page
+            <PostsDummyComponent/>
         </div>
     );
 };

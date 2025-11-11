@@ -26,17 +26,17 @@ export const infoService = {
 
     },
     getAllUsersDummyjson: async (): Promise<IUserDummyjson[]> => {
-        const {users}: IUserResponseDummyjson = await fetch(urls.users.allUsersFromJson)
+        const {users}: IUserResponseDummyjson = await fetch(urls.users.allUsersFromDummyjson)
             .then(value => value.json())
         return users;
     },
     getAllPostsDummyjson: async (): Promise<IPostDummyjson[]> => {
-        const {posts}: IPostResponseDummyjson = await fetch(urls.posts.allPostsFromJson)
+        const {posts}: IPostResponseDummyjson = await fetch(urls.posts.allPostsFromDummyjson)
             .then(value => value.json())
         return posts;
     },
     getAllCommentsDummyjson: async (): Promise<ICommentDummyjson[]> => {
-        const {comments}: ICommentResponseDummyjson = await fetch(urls.comments.allCommentsFromJson)
+        const {comments}: ICommentResponseDummyjson = await fetch(urls.comments.allCommentsFromDummyjson)
             .then(value => value.json())
         return comments;
 

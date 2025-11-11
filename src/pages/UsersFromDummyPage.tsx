@@ -1,8 +1,9 @@
+import UsersDummyComponent from "../components/UsersDummyComponent/UsersDummyComponent";
 
 const UsersFromDummyPage = () => {
     return (
         <div>
-            Users From Dummyjson Page
+            <UsersDummyComponent/>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import type { User } from "./IUser";
+import type { IUser } from "./IUser";
 
 
 export interface ICommentDummyjson {
@@ -6,5 +6,5 @@ export interface ICommentDummyjson {
   body: string;
   postId: number;
   likes: number;
-  user: User;
+  user: IUser;
 }

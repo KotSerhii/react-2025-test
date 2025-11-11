@@ -2,7 +2,7 @@ import type { Address } from "./IAddress";
 import type { Bank } from "./IBank";
 import type { Company } from "./ICompany";
 import type { Hair } from "./IHair";
-
+import type { Crypto } from "./ICrypto"
 
 
 export interface IUserDummyjson {

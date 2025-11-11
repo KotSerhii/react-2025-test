@@ -1,4 +1,4 @@
-export interface Reactions {
+export interface IReactions {
     likes: number;
     dislikes: number;
 }

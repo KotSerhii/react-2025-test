@@ -1,9 +1,10 @@
+import CommentsDummyComponent from "../components/CommentsDummyComponent/CommentsDummyComponent";
 
 
 const CommentsFromDummyPage = () => {
     return (
         <div>
-            Comments From Dummyplaceholder Page
+          <CommentsDummyComponent/>
         </div>
     );
 };
