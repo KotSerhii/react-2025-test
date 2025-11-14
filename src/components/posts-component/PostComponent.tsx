@@ -1,9 +1,13 @@
+import type { IPost } from "../../models/IPost";
 
+interface IPostComponentProps {
+    post: IPost;
+}
 
-const PostComponent = () => {
+const PostComponent = ({post}: IPostComponentProps) => {
     return (
         <div>
-
+            {post.title}
         </div>
     );
 };
