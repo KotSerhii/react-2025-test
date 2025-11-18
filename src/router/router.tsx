@@ -1,6 +1,12 @@
-import { createBrowserRouter } from "react-router-dom";
+import {createBrowserRouter} from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
+import UsersPage from "../pages/UsersPage";
 
-export const routes=createBrowserRouter([
-    {path:"/", element:<MainLayout/>},
+export const routes = createBrowserRouter([
+    {
+        path: "/", element: <MainLayout/>, children: [
+            {path: "users", element: <UsersPage/>}
+
+        ]
+    },
 ])
