@@ -1,10 +1,14 @@
-import UsersPage from "../pages/UsersPage";
+import { Outlet } from "react-router-dom";
+import Menu from "../components/menu/Menu";
+
 
 
 const MainLayout = () => {
     return (
         <div>
-            <UsersPage/>
+            <Menu/>
+            <Outlet/>
+
         </div>
     );
 };
