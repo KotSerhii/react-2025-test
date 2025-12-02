@@ -10,24 +10,34 @@ const FormComponent = () => {
         username: 'foobar',
         password: '1111'
     })
-    const hanleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        let user={
+            username: formState.username,
+            password: formState.password
+        };
+        console.log(user);
     };
 
-    const handleUsernameChange = (e: FormEvent<HTMLInputElement>) => {
-        const input = e.target as HTMLInputElement;
-        setFormState({...formState, username: input.value}); // відбувається контроль елементу Інпут
-    };
-    const handlePasswordChange = (e: FormEvent<HTMLInputElement>) => {
-        const input = e.target as HTMLInputElement;
-        setFormState({...formState, password: input.value}); // спочатку ...formState - приймає дефолтне значення, а потім за допомогою наступного елементу password: в useStste прописується з поля інпуту (те що вводимо)
-    };
+    // const handleUsernameChange = (e: FormEvent<HTMLInputElement>) => {
+    //     const input = e.target as HTMLInputElement;
+    //     setFormState({...formState, username: input.value}); // відбувається контроль елементу Інпут (1 спосіб)
+    // };
+    // const handlePasswordChange = (e: FormEvent<HTMLInputElement>) => {
+    //     const input = e.target as HTMLInputElement;
+    //     setFormState({...formState, password: input.value}); // спочатку ...formState - приймає дефолтне значення, а потім за допомогою наступного елементу password: в useStste прописується з поля інпуту (те що вводимо)
+    // };
+    const handleInputChange = (e: FormEvent<HTMLInputElement>) => {
+            const input = e.target as HTMLInputElement;
+            console.log(input.name);
+            setFormState({...formState, [input.name]: input.value}); // 2-спосіб використовуємо динамічний ключ [input.name] - тобто з яким полем ми будемо працювати таке і буде підствляти
+        };
 
     return (
         <div>
-            <form onSubmit={hanleSubmit}>
-                <input type="text" name={'username'} value={formState.username} onChange={handleUsernameChange}/>
-                <input type="text" name={'password'} value={formState.password} onChange={handlePasswordChange}/>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name={'username'} value={formState.username} onChange={handleInputChange}/>
+                <input type="text" name={'password'} value={formState.password} onChange={handleInputChange}/>
                 <button type="submit">Send</button>
             </form>
         </div>
