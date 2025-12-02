@@ -8,7 +8,9 @@ interface IFormProps {
 const FormComponent = () => {
 
 
-    const {handleSubmit,register} = useForm<IFormProps>();//деструктуруємо та витягаємо методи з хука, метод handleSubmit повинен приймати колбек ф-цію, метод register автоматично створює об'єкти з назвою полів інпуту
+    const {handleSubmit,register,formState:{errors,isValid}} = useForm<IFormProps>({
+        mode: 'all',
+    }); // для перевірки валідності використовуємо formState, mode - це ф-ція для задачі параметрів "коли виводити повідомлення при валідації"
 
 
 ``
@@ -19,10 +21,35 @@ const FormComponent = () => {
 
         <div>
             <form onSubmit={handleSubmit(customHandler)}>
-                <input type="text" {...register('username')}/>
-                <input type="text" {...register('password')}/>
-                <input type="number" {...register('age')}/>
-                <button type="submit">Send</button>
+                <label>
+                    <input type="text" {...register('username', {
+                    required: {value:true, message: 'Username is required'},
+                    //     pattern:{
+                    //        value:/^[a-zA-Z0-9_-]+$/,
+                    //         message:'wrong name'
+                    // }
+                    minLength: {value: 4, message: "wrong-username"}
+                })}/>
+                    {errors.username && <div>{errors.username.message}</div>}
+                </label>
+                <label>
+                    <input type="text" {...register('password', {
+                    required: true,
+                    minLength: {value: 3, message: "password is short"},
+                    maxLength: {value: 6, message: "password is long"},
+                })}/>
+                    {errors.password && <div>{errors.password.message}</div>}
+                </label>
+                <label>
+                    <input type="number" {...register('age', {
+                    required: true,
+                    valueAsNumber: true,
+                    min: {value: 1, message: "age too small"},
+                    max: {value: 117, message: "age too big"},
+                })}/>
+                    {errors.age && <div>{errors.age.message}</div>}
+                </label>
+                <button disabled={!isValid}>Send</button>
             </form>
         </div>
     );
