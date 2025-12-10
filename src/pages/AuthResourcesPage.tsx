@@ -8,4 +8,4 @@ const AuthResourcesPage = () => {
     );
 };
 
-export default AuthResoursesPage;
+export default AuthResourcesPage;

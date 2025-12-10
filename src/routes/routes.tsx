@@ -1,8 +1,8 @@
-import AuthResourcesPage from "../pages/AuthResoursesPage.tsx";
+import AuthResourcesPage from "../pages/AuthResourcesPage.tsx";
 import HomePage from "../pages/HomePage.tsx";
 import LoginPage from "../pages/LoginPage.tsx";
-
 import {createBrowserRouter} from "react-router-dom"
+import MainLayout from "../layouts/MainLayout.tsx";
 
 export const routes = createBrowserRouter([
     {
