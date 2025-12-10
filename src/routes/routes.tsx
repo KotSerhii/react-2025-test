@@ -1,9 +1,15 @@
-export {createBrowserRouter} from "react-router-dom"
+import AuthResourcesPage from "../pages/AuthResoursesPage.tsx";
+import HomePage from "../pages/HomePage.tsx";
+import LoginPage from "../pages/LoginPage.tsx";
 
-export const routes=createBrowserRouter([
-        {path: '/', element: <MainLayout/>, children: [
+import {createBrowserRouter} from "react-router-dom"
+
+export const routes = createBrowserRouter([
+    {
+        path: '/', element: <MainLayout/>, children: [
             {index: true, element: <HomePage/>},
-            {path: 'login', element: <LoginationPage/>},
-            {path: 'auth/resourses', element: <AuthResoursesPage/>},
-        ]}
+            {path: 'login', element: <LoginPage/>},
+            {path: 'auth/resources', element: <AuthResourcesPage/>},
+        ]
+    }
 ])

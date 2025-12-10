@@ -1,6 +1,6 @@
 
 
-const AuthResoursesPage = () => {
+const AuthResourcesPage = () => {
     return (
         <div>
             Resourses Page
