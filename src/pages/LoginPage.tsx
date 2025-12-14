@@ -3,7 +3,7 @@ import {login} from "../services/api.service.tsx";
 
 
 const LoginPage = () => {
-
+// виконуємо процес логінації (тут хардкод, в проекті буде форма)
     useEffect(() => {
         login({
             username: 'emilys',
