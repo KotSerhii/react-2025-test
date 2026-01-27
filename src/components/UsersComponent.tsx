@@ -1,5 +1,5 @@
 import UserComponent from "./UserComponent.tsx";
-import {useCallback, useEffect, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 
 
 const UsersComponent = () => {
@@ -9,6 +9,16 @@ const UsersComponent = () => {
     const foo = useCallback(()=>{
         console.log("foo");
     },[]);
+
+    // const arr: number[] = [11, 22, 33];
+    // коли ми хочемо передати масив в інший компонент, та закешувати його так само, як функцію foo, треба використати
+    // хук useMemo(..., deps.[]), але синтаксис буде наступний:
+
+    const arr: number[] = useMemo(() => {
+        return [11, 22, 33];
+    },[]);
+
+
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/users")
         .then((users) => users.json())
@@ -17,7 +27,7 @@ const UsersComponent = () => {
     console.log("Users");
     return (
         <div>
-            <UserComponent foo={foo}/>
+            <UserComponent foo={foo} arr={arr}/>
         </div>
     );
 };
