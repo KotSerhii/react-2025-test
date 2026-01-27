@@ -1,9 +1,10 @@
 import UserComponent from "./UserComponent.tsx";
-import {useCallback, useEffect, useMemo, useState} from "react";
+import {useCallback, useMemo} from "react";
+import {useFetch} from "../hooks/useFetch.tsx";
 
 
 const UsersComponent = () => {
-    const [users, setUsers] = useState([])
+const users = useFetch();
 // використання хука useCallback(огортаємо ф-цію), додаємо deps.[], в цьому випадку ререндерінг компонента UserComponent, в
     // який передаємо foo, не відбувається
     const foo = useCallback(()=>{
@@ -19,15 +20,11 @@ const UsersComponent = () => {
     },[]);
 
 
-    useEffect(() => {
-        fetch("https://jsonplaceholder.typicode.com/users")
-        .then((users) => users.json())
-        .then((users) => setUsers(users));
-    }, []);
+
     console.log("Users");
     return (
         <div>
-            <UserComponent foo={foo} arr={arr}/>
+            {users.map((user)=><UserComponent item={user} foo={foo} arr={arr}/>)}
         </div>
     );
 };

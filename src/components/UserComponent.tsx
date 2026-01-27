@@ -8,13 +8,13 @@ import {type FC, memo} from "react";
 // Прокинемо функцію foo до компоненти, в такому випадку UserComponent знову виконається вдруге, тому що функція
 // з компонента UsersComponent будується наново і фактично робить нове посилання, яке викликає ререндер UserComponent
 // при цьому сама foo не змінюється, щоб ререндер не відбувався в цьому випадку треба використовувати хук useCallback(див.UsersComponent)
-const UserComponent:FC<{foo:()=>void, arr:number[]}> = memo((arr) => {
+const UserComponent: FC<{ foo: () => void, arr: number[], item: {name:string} }> = memo(({arr, item}) => {
 
     console.log("User");
     console.log(arr);
     return (
         <div>
-            <>user</>
+            <div>{item.name}</div>
         </div>
     );
 });
