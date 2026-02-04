@@ -15,7 +15,7 @@ export const UsersPage = () => {
     // const stateType=useAppSelector(state => state.userSlice)
 
 
-    const {users}=useAppSelector(({userSlice}) => userSlice)
+    const {users,loadState}=useAppSelector(({userSlice}) => userSlice)
 
     // зараз userSlice - це наш const initialState: UserSliceType = {users: []}, який ми підхопили в іншій компоненті,
     // яку далі ми можемо використовувати
@@ -35,6 +35,8 @@ dispatch(userSliceActions.loadUsers());
 
     return (
         <div>
+            {!loadState && <div>Loading...</div>}
+
             {
                 users.map(user=>{
                     return <div key={user.id}>{user.id} - {user.name}</div>

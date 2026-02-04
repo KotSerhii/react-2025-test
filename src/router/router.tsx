@@ -7,7 +7,7 @@ import {PostsPage} from "../pages/PostsPage.tsx";
 const routes = [{
     path: "", element:<MainLayout/>, children: [
         {path:'users',element:<UsersPage/>},
-        {path:'users/1',element:<UserPage/>},
+        {path:'users/:id',element:<UserPage/>},
         {path:'posts',element:<PostsPage/>},
 
     ]
