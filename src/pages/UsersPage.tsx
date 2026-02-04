@@ -1,6 +1,7 @@
-import {useAppSelector, userSliceActions} from "../main.tsx";
-import {useDispatch} from "react-redux";
 import {useEffect} from "react";
+import {useAppSelector} from "../redux/hooks/useAppSelector.tsx";
+import {userSliceActions} from "../redux/slices/userSlice/userSlice.ts";
+import {useAppDispatch} from "../redux/hooks/useAppDispatch.tsx";
 
 export const UsersPage = () => {
 
@@ -22,15 +23,14 @@ export const UsersPage = () => {
     // передати ф-цію з reducers:{} - userSlice.actions.loadUsers(users), щоб працювати зручно ми будемо одразу експортувати
     // ф-цію "...userSlice.actions" та оголошувати необхідну ф-цію
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
+// в такому випадку dispatch не типизований, тому для нього необхідно створити обгортку, також механізм схожий
+// до створення useAppSelector (recommend to create lifetemplates for these functions):
+    const dispatch = useAppDispatch();
+
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(response => response.json())
-            .then(users => {
-                // dispatch(userSlice.actions.loadUsers(users))
-                dispatch(userSliceActions.loadUsers(users))
-            })
+dispatch(userSliceActions.loadUsers());
     }, []);
 
     return (
