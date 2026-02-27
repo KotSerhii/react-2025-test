@@ -21,6 +21,7 @@ type UserSliceType = {
 }
 
 const initialState: UserSliceType = {users: [], user:null, loadState: false};
+
 const loadUsers=createAsyncThunk(
     "userSlice/loadUsers",
      async (_,thunkAPI)=>{
