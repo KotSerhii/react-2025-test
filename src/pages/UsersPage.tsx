@@ -1,12 +1,10 @@
-import {getAll} from "../services/api.services.ts";
-import type {IUser} from "../models/IUser.ts";
-
+import UsersComponent from "../components/users-component/UsersComponent.tsx";
 
 const UsersPage = () => {
-    getAll<IUser[]>('/users')
+
     return (
         <div>
-
+            <UsersComponent/>
         </div>
     );
 };
